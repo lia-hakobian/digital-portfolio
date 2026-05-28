@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Ophelia Hakobyan</title>
 
@@ -25,7 +25,7 @@ html{
 
 body{
   background:#050505;
-  color:#f3f3f3;
+  color:#f2f2f2;
   font-family:'Inter',sans-serif;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
@@ -36,8 +36,8 @@ body::before{
   position:fixed;
   inset:0;
   background:
-  linear-gradient(rgba(188,205,123,0.018) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(188,205,123,0.018) 1px, transparent 1px);
+  linear-gradient(rgba(188,205,123,0.015) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(188,205,123,0.015) 1px, transparent 1px);
   background-size:72px 72px;
   pointer-events:none;
 }
@@ -49,7 +49,7 @@ a{
 
 .container{
   width:100%;
-  max-width:1450px;
+  max-width:1480px;
   margin:0 auto;
   padding:34px 40px 70px;
 }
@@ -61,36 +61,35 @@ TOPBAR
 .topbar{
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
+  align-items:center;
   margin-bottom:90px;
 }
 
-.brand-name{
-  font-size:0.95rem;
-  line-height:1.4;
-  letter-spacing:0.24em;
+.brand{
+  font-size:0.92rem;
+  letter-spacing:0.26em;
   font-weight:500;
 }
 
-.nav-links{
+.nav{
   display:flex;
-  gap:64px;
+  gap:54px;
 }
 
-.nav-links a{
+.nav a{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.75rem;
-  color:#d1d1d1;
+  font-size:0.72rem;
+  color:#d5d5d5;
+  padding-bottom:10px;
   position:relative;
-  padding-bottom:12px;
 }
 
-.nav-links a.active::after{
+.nav a.active::after{
   content:"";
   position:absolute;
   left:0;
   bottom:0;
-  width:42px;
+  width:38px;
   height:1px;
   background:#bccd7b;
 }
@@ -101,31 +100,31 @@ HERO
 
 .hero{
   display:grid;
-  grid-template-columns:0.95fr 0.8fr 0.6fr;
-  gap:40px;
+  grid-template-columns:1fr 0.9fr 0.7fr;
+  gap:30px;
   align-items:center;
-  margin-bottom:90px;
+  margin-bottom:110px;
 }
 
 /* LEFT */
 
 .hero-left{
   position:relative;
-  padding-left:60px;
+  padding-left:55px;
 }
 
-.vertical-line{
+.side-line{
   position:absolute;
-  left:14px;
+  left:12px;
   top:0;
   width:1px;
   height:100%;
   background:rgba(188,205,123,0.12);
 }
 
-.vertical-dot{
+.side-dot{
   position:absolute;
-  left:10px;
+  left:8px;
   top:14px;
   width:8px;
   height:8px;
@@ -133,31 +132,31 @@ HERO
   border-radius:50%;
 }
 
-.vertical-text{
+.side-text{
   position:absolute;
-  left:-6px;
-  top:300px;
+  left:-10px;
+  top:290px;
   transform:rotate(-90deg);
   transform-origin:left top;
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.68rem;
+  font-size:0.66rem;
   letter-spacing:0.14em;
-  color:#7d7d7d;
+  color:#777;
 }
 
 .hero-label{
   font-family:'IBM Plex Mono', monospace;
   color:#bccd7b;
-  font-size:0.75rem;
+  font-size:0.72rem;
   margin-bottom:24px;
 }
 
 .hero h1{
-  font-size:clamp(3.9rem,6vw,6.1rem);
+  font-size:clamp(3.6rem,6vw,5.8rem);
   line-height:0.9;
-  letter-spacing:-0.08em;
   font-weight:400;
-  margin-bottom:30px;
+  letter-spacing:-0.08em;
+  margin-bottom:26px;
 }
 
 .hero h1 span{
@@ -167,23 +166,19 @@ HERO
 .hero p{
   max-width:420px;
   color:#8f8f8f;
-  font-size:0.92rem;
+  font-size:0.9rem;
   line-height:1.9;
-  margin-bottom:34px;
+  margin-bottom:32px;
 }
 
 .hero-link{
   display:inline-flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.76rem;
+  font-size:0.74rem;
   border-bottom:1px solid #bccd7b;
   padding-bottom:7px;
-}
-
-.hero-link:hover{
-  color:#bccd7b;
 }
 
 /* =========================
@@ -195,27 +190,27 @@ CENTER
   display:flex;
   justify-content:center;
   align-items:center;
-  min-height:420px;
+  min-height:430px;
 }
 
 .circle{
   position:absolute;
-  width:300px;
-  height:300px;
+  width:290px;
+  height:290px;
   border:1px dashed rgba(188,205,123,0.08);
   border-radius:50%;
 }
 
-.cross-v{
+.line-v{
   position:absolute;
   width:1px;
-  height:390px;
+  height:380px;
   background:rgba(188,205,123,0.08);
 }
 
-.cross-h{
+.line-h{
   position:absolute;
-  width:390px;
+  width:380px;
   height:1px;
   background:rgba(188,205,123,0.08);
 }
@@ -226,7 +221,6 @@ CENTER
   height:14px;
   border-top:1px solid #bccd7b;
   border-left:1px solid #bccd7b;
-  opacity:0.8;
 }
 
 .c1{
@@ -257,45 +251,46 @@ PISTACHIO
 ========================= */
 
 .shell{
-  width:210px;
+  width:190px;
   position:relative;
-  z-index:3;
-  filter:drop-shadow(0 0 18px rgba(188,205,123,0.12));
+  z-index:2;
+  filter:drop-shadow(0 0 12px rgba(188,205,123,0.12));
 }
 
 /* =========================
-RIGHT SIDE
+RIGHT
 ========================= */
 
 .hero-right{
+  position:relative;
+  padding-left:28px;
   border-left:1px solid rgba(188,205,123,0.08);
-  padding-left:26px;
 }
 
-.skill-item{
-  margin-bottom:30px;
+.note{
+  margin-bottom:36px;
 }
 
-.skill-symbol{
+.note-symbol{
   color:#bccd7b;
-  font-family:'IBM Plex Mono', monospace;
-  font-size:0.9rem;
+  font-size:0.8rem;
   margin-bottom:8px;
+  font-family:'IBM Plex Mono', monospace;
 }
 
-.skill-title{
+.note-title{
   font-family:'IBM Plex Mono', monospace;
   color:#bccd7b;
-  font-size:0.76rem;
-  margin-bottom:7px;
+  font-size:0.72rem;
   letter-spacing:0.08em;
+  margin-bottom:6px;
 }
 
-.skill-text{
-  color:#868686;
-  font-size:0.82rem;
-  line-height:1.75;
-  max-width:220px;
+.note-text{
+  color:#7f7f7f;
+  font-size:0.8rem;
+  line-height:1.7;
+  max-width:210px;
 }
 
 /* =========================
@@ -304,92 +299,85 @@ SECTION
 
 .section{
   border-top:1px solid rgba(188,205,123,0.08);
-  padding-top:22px;
+  padding-top:20px;
   margin-bottom:80px;
 }
 
 .section-title{
   font-family:'IBM Plex Mono', monospace;
   color:#bccd7b;
-  font-size:0.78rem;
-  margin-bottom:34px;
+  font-size:0.75rem;
+  margin-bottom:30px;
 }
 
 /* EXPERIENCE */
 
-.experience-text{
-  max-width:620px;
-  color:#939393;
+.experience{
+  max-width:650px;
+  color:#909090;
   line-height:2;
-  font-size:0.94rem;
+  font-size:0.92rem;
 }
 
 /* TOOLS */
 
-.tools-grid{
+.tools{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:14px;
+  gap:12px;
 }
 
 .tool{
   border:1px solid rgba(188,205,123,0.05);
-  padding:18px;
-  min-height:86px;
+  min-height:78px;
+  padding:16px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  transition:0.2s ease;
-}
-
-.tool:hover{
-  border-color:rgba(188,205,123,0.18);
 }
 
 .tool-symbol{
   color:#bccd7b;
-  font-size:0.9rem;
+  font-size:0.8rem;
   margin-bottom:8px;
 }
 
 .tool-name{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.72rem;
-  color:#d6d6d6;
+  font-size:0.68rem;
   text-align:center;
   line-height:1.5;
 }
 
 /* DEVELOPMENT */
 
-.dev-box{
+.dev{
   display:grid;
-  grid-template-columns:80px 1fr;
-  gap:24px;
+  grid-template-columns:70px 1fr;
+  gap:22px;
   align-items:flex-start;
 }
 
-.dev-icon{
-  width:70px;
-  height:70px;
+.dev-box{
+  width:64px;
+  height:64px;
   border:1px solid rgba(188,205,123,0.1);
   display:flex;
   justify-content:center;
   align-items:center;
   color:#bccd7b;
-  font-size:1.2rem;
 }
 
-.dev-content h3{
-  font-size:1.4rem;
+.dev h3{
+  font-size:1.35rem;
   font-weight:400;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
-.dev-content p{
-  max-width:560px;
-  color:#919191;
+.dev p{
+  max-width:540px;
+  color:#8d8d8d;
   line-height:1.9;
   font-size:0.9rem;
 }
@@ -401,23 +389,23 @@ footer{
   padding-top:34px;
   display:grid;
   grid-template-columns:1fr 0.7fr;
-  gap:50px;
+  gap:40px;
   align-items:center;
 }
 
 .footer-left{
   display:flex;
   align-items:center;
-  gap:24px;
+  gap:20px;
 }
 
 .footer-shell{
-  width:70px;
+  width:64px;
 }
 
 .footer-text{
-  font-size:1.9rem;
-  line-height:1.1;
+  font-size:1.8rem;
+  line-height:1.08;
   letter-spacing:-0.06em;
   font-weight:300;
 }
@@ -429,17 +417,13 @@ footer{
 .footer-links{
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:14px;
 }
 
 .footer-links a{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.74rem;
+  font-size:0.72rem;
   color:#d5d5d5;
-}
-
-.footer-links a:hover{
-  color:#bccd7b;
 }
 
 /* =========================
@@ -458,7 +442,7 @@ MOBILE
     padding-left:0;
   }
 
-  .tools-grid{
+  .tools{
     grid-template-columns:repeat(2,1fr);
   }
 
@@ -474,28 +458,28 @@ MOBILE
     padding:24px 18px 60px;
   }
 
-  .nav-links{
+  .nav{
     display:none;
   }
 
   .hero-left{
-    padding-left:40px;
+    padding-left:38px;
   }
 
   .hero h1{
-    font-size:3.5rem;
+    font-size:3.3rem;
   }
 
   .shell{
-    width:170px;
+    width:150px;
   }
 
-  .tools-grid{
+  .tools{
     grid-template-columns:1fr;
   }
 
   .footer-text{
-    font-size:1.5rem;
+    font-size:1.45rem;
   }
 
 }
@@ -511,11 +495,11 @@ MOBILE
 
 <div class="topbar">
 
-  <div class="brand-name">
+  <div class="brand">
     OPHELIA HAKOBYAN
   </div>
 
-  <div class="nav-links">
+  <div class="nav">
 
     <a href="#about" class="active">ABOUT</a>
     <a href="#experience">EXPERIENCE</a>
@@ -534,10 +518,10 @@ MOBILE
 
   <div class="hero-left">
 
-    <div class="vertical-line"></div>
-    <div class="vertical-dot"></div>
+    <div class="side-line"></div>
+    <div class="side-dot"></div>
 
-    <div class="vertical-text">
+    <div class="side-text">
       DIGITAL WORK · ALWAYS EVOLVING
     </div>
 
@@ -572,8 +556,8 @@ MOBILE
 
     <div class="circle"></div>
 
-    <div class="cross-v"></div>
-    <div class="cross-h"></div>
+    <div class="line-v"></div>
+    <div class="line-h"></div>
 
     <div class="corner c1"></div>
     <div class="corner c2"></div>
@@ -584,66 +568,76 @@ MOBILE
 
     <svg class="shell" viewBox="0 0 500 500" fill="none">
 
-      <path d="
-      M250 70
-      C185 100 145 175 150 255
-      C155 330 198 390 250 430"
-      stroke="#BCCD7B"
-      stroke-width="5"
-      stroke-linecap="round"/>
+      <!-- LEFT -->
 
       <path d="
       M250 70
-      C315 100 355 175 350 255
-      C345 330 302 390 250 430"
-      stroke="#BCCD7B"
-      stroke-width="5"
-      stroke-linecap="round"/>
-
-      <path d="
-      M250 125
-      C220 160 205 210 208 260
-      C212 315 228 350 250 382"
+      C188 110 150 180 154 255
+      C158 330 198 388 250 425"
       stroke="#BCCD7B"
       stroke-width="4"
       stroke-linecap="round"/>
 
+      <!-- RIGHT -->
+
       <path d="
-      M250 125
-      C280 160 295 210 292 260
-      C288 315 272 350 250 382"
+      M250 70
+      C312 110 350 180 346 255
+      C342 330 302 388 250 425"
       stroke="#BCCD7B"
       stroke-width="4"
       stroke-linecap="round"/>
 
+      <!-- INNER -->
+
       <path d="
-      M250 95
-      L242 140
-      L255 185
-      L245 235
-      L258 285
-      L247 330
-      L257 365
-      L250 395"
+      M250 128
+      C220 170 210 220 214 268
+      C218 315 230 348 250 378"
       stroke="#BCCD7B"
       stroke-width="3"
       stroke-linecap="round"/>
 
-      <path d="M135 350L152 342L158 358L142 366Z"
+      <path d="
+      M250 128
+      C280 170 290 220 286 268
+      C282 315 270 348 250 378"
       stroke="#BCCD7B"
-      stroke-width="3"/>
+      stroke-width="3"
+      stroke-linecap="round"/>
 
-      <path d="M170 382L184 374L192 388L176 396Z"
-      stroke="#BCCD7B"
-      stroke-width="3"/>
+      <!-- CRACK -->
 
-      <path d="M325 382L340 372L350 388L334 398Z"
+      <path d="
+      M250 92
+      L242 138
+      L254 180
+      L244 225
+      L257 270
+      L246 318
+      L255 355
+      L250 390"
       stroke="#BCCD7B"
-      stroke-width="3"/>
+      stroke-width="2.5"
+      stroke-linecap="round"/>
 
-      <path d="M360 350L378 340L386 356L370 366Z"
+      <!-- PIECES -->
+
+      <path d="M145 350L160 342L166 356L150 364Z"
       stroke="#BCCD7B"
-      stroke-width="3"/>
+      stroke-width="2.5"/>
+
+      <path d="M175 378L188 370L194 384L180 392Z"
+      stroke="#BCCD7B"
+      stroke-width="2.5"/>
+
+      <path d="M322 378L336 370L344 384L328 392Z"
+      stroke="#BCCD7B"
+      stroke-width="2.5"/>
+
+      <path d="M350 350L366 340L374 356L358 366Z"
+      stroke="#BCCD7B"
+      stroke-width="2.5"/>
 
     </svg>
 
@@ -653,57 +647,57 @@ MOBILE
 
   <div class="hero-right">
 
-    <div class="skill-item">
+    <div class="note">
 
-      <div class="skill-symbol">◌</div>
+      <div class="note-symbol">◌</div>
 
-      <div class="skill-title">
+      <div class="note-title">
         SHOPIFY SYSTEMS
       </div>
 
-      <div class="skill-text">
+      <div class="note-text">
         Storefront management and structured digital operations.
       </div>
 
     </div>
 
-    <div class="skill-item">
+    <div class="note">
 
-      <div class="skill-symbol">◇</div>
+      <div class="note-symbol">◇</div>
 
-      <div class="skill-title">
+      <div class="note-title">
         CLIENT COMMUNICATION
       </div>
 
-      <div class="skill-text">
+      <div class="note-text">
         Clear and responsive communication across workflows.
       </div>
 
     </div>
 
-    <div class="skill-item">
+    <div class="note">
 
-      <div class="skill-symbol">│</div>
+      <div class="note-symbol">│</div>
 
-      <div class="skill-title">
+      <div class="note-title">
         DIGITAL WORKFLOWS
       </div>
 
-      <div class="skill-text">
+      <div class="note-text">
         Organized systems with adaptable operational structure.
       </div>
 
     </div>
 
-    <div class="skill-item">
+    <div class="note">
 
-      <div class="skill-symbol">⬡</div>
+      <div class="note-symbol">⬡</div>
 
-      <div class="skill-title">
+      <div class="note-title">
         TECHNICAL ADAPTABILITY
       </div>
 
-      <div class="skill-text">
+      <div class="note-text">
         Fast learner comfortable with evolving platforms and tools.
       </div>
 
@@ -721,7 +715,7 @@ MOBILE
     EXPERIENCE
   </div>
 
-  <div class="experience-text">
+  <div class="experience">
     Background in sales, customer communication, and operational support with experience working in fast-paced environments that require adaptability, organization, and strong interpersonal skills.
   </div>
 
@@ -735,7 +729,7 @@ MOBILE
     TOOLS / SKILLS
   </div>
 
-  <div class="tools-grid">
+  <div class="tools">
 
     <div class="tool">
       <div class="tool-symbol">◌</div>
@@ -809,13 +803,13 @@ MOBILE
     DEVELOPMENT
   </div>
 
-  <div class="dev-box">
+  <div class="dev">
 
-    <div class="dev-icon">
+    <div class="dev-box">
       ↗
     </div>
 
-    <div class="dev-content">
+    <div>
 
       <h3>
         Continuous Growth
@@ -841,31 +835,31 @@ MOBILE
 
       <path d="
       M250 70
-      C185 100 145 175 150 255
-      C155 330 198 390 250 430"
+      C188 110 150 180 154 255
+      C158 330 198 388 250 425"
       stroke="#BCCD7B"
-      stroke-width="5"
+      stroke-width="4"
       stroke-linecap="round"/>
 
       <path d="
       M250 70
-      C315 100 355 175 350 255
-      C345 330 302 390 250 430"
+      C312 110 350 180 346 255
+      C342 330 302 388 250 425"
       stroke="#BCCD7B"
-      stroke-width="5"
+      stroke-width="4"
       stroke-linecap="round"/>
 
       <path d="
-      M250 95
-      L242 140
-      L255 185
-      L245 235
-      L258 285
-      L247 330
-      L257 365
-      L250 395"
+      M250 92
+      L242 138
+      L254 180
+      L244 225
+      L257 270
+      L246 318
+      L255 355
+      L250 390"
       stroke="#BCCD7B"
-      stroke-width="3"
+      stroke-width="2.5"
       stroke-linecap="round"/>
 
     </svg>
