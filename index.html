@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -10,6 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -40,7 +43,7 @@ a{
   width:100%;
   max-width:1240px;
   margin:0 auto;
-  padding:36px 32px 80px;
+  padding:38px 32px 80px;
 }
 
 /* NAV */
@@ -50,59 +53,48 @@ nav{
 }
 
 .logo{
-  font-size:0.82rem;
-  letter-spacing:0.22em;
-  font-weight:600;
-  color:#d6d3d1;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:0.18em;
+  color:#f5f5f4;
 }
 
 /* HERO */
 
 .hero{
-  display:grid;
-  grid-template-columns:1.2fr 0.8fr;
-  gap:80px;
+  max-width:980px;
   margin-bottom:140px;
 }
 
-.hero-left h1{
-  font-size:clamp(3.8rem,8vw,7.5rem);
-  line-height:0.92;
-  letter-spacing:-0.08em;
+.hero h1{
+  font-size:clamp(4rem,9vw,8rem);
+  line-height:0.9;
+  letter-spacing:-0.09em;
   font-weight:700;
   margin-bottom:28px;
-  max-width:820px;
+  max-width:900px;
 }
 
-.hero-left p{
-  max-width:560px;
-  color:#9f9f9f;
+.hero p{
+  max-width:600px;
+  color:#9a9a9a;
   font-size:1.02rem;
 }
 
-.hero-right{
+/* MINI CODE */
+
+.mini-code{
+  margin-top:38px;
   display:flex;
   flex-direction:column;
-  gap:28px;
-  justify-content:flex-end;
+  gap:10px;
 }
 
-.info{
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding-top:14px;
-}
-
-.info-label{
-  font-size:0.72rem;
-  text-transform:uppercase;
-  letter-spacing:0.12em;
-  color:#6d6d6d;
-  margin-bottom:10px;
-}
-
-.info-text{
-  color:#e7e5e4;
-  font-size:0.95rem;
+.mini-code span{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  color:#737373;
+  letter-spacing:-0.02em;
 }
 
 /* SECTION */
@@ -111,16 +103,13 @@ nav{
   margin-bottom:140px;
 }
 
-.section-top{
-  margin-bottom:50px;
-}
-
 .section-label{
-  font-size:0.72rem;
-  letter-spacing:0.14em;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem;
+  letter-spacing:0.08em;
   text-transform:uppercase;
-  color:#6d6d6d;
-  margin-bottom:16px;
+  color:#707070;
+  margin-bottom:24px;
 }
 
 .section-title{
@@ -128,62 +117,7 @@ nav{
   line-height:1;
   letter-spacing:-0.05em;
   font-weight:650;
-}
-
-/* WORK */
-
-.work-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:26px;
-}
-
-.work-card{
-  background:#111112;
-  border:1px solid rgba(255,255,255,0.05);
-  padding:34px;
-  transition:0.25s ease;
-}
-
-.work-card:hover{
-  border-color:rgba(255,255,255,0.12);
-  transform:translateY(-2px);
-}
-
-.work-small{
-  font-size:0.7rem;
-  text-transform:uppercase;
-  letter-spacing:0.12em;
-  color:#777;
-  margin-bottom:18px;
-}
-
-.work-card h3{
-  font-size:1.5rem;
-  line-height:1.1;
-  letter-spacing:-0.04em;
-  margin-bottom:18px;
-  font-weight:600;
-}
-
-.work-card p{
-  color:#9a9a9a;
-  margin-bottom:24px;
-  max-width:480px;
-}
-
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.tag{
-  border:1px solid rgba(255,255,255,0.08);
-  padding:7px 14px;
-  border-radius:100px;
-  font-size:0.82rem;
-  color:#c8c8c8;
+  margin-bottom:50px;
 }
 
 /* EXPERIENCE */
@@ -196,11 +130,11 @@ nav{
 
 .exp-item{
   border-top:1px solid rgba(255,255,255,0.08);
-  padding-top:16px;
-  margin-bottom:34px;
+  padding-top:18px;
+  margin-bottom:36px;
 }
 
-.exp-head{
+.exp-top{
   display:flex;
   justify-content:space-between;
   gap:20px;
@@ -213,19 +147,21 @@ nav{
 }
 
 .exp-year{
-  color:#737373;
-  font-size:0.9rem;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  color:#6f6f6f;
 }
 
 .exp-company{
-  color:#8d8d8d;
+  color:#868686;
   margin-bottom:12px;
   font-size:0.92rem;
 }
 
 .exp-item p{
-  color:#a1a1a1;
+  color:#9f9f9f;
   font-size:0.95rem;
+  max-width:500px;
 }
 
 /* TOOLS */
@@ -241,13 +177,18 @@ nav{
   background:#111112;
   border:1px solid rgba(255,255,255,0.06);
   font-size:0.9rem;
-  color:#d4d4d4;
+  color:#d5d5d5;
+  transition:0.2s ease;
+}
+
+.tool:hover{
+  border-color:rgba(255,255,255,0.14);
 }
 
 /* DEVELOPMENT */
 
 .dev-box{
-  max-width:720px;
+  max-width:760px;
   border-top:1px solid rgba(255,255,255,0.08);
   padding-top:18px;
 }
@@ -259,7 +200,8 @@ nav{
 }
 
 .dev-box p{
-  color:#9f9f9f;
+  color:#9a9a9a;
+  max-width:620px;
 }
 
 /* CONTACT */
@@ -270,43 +212,39 @@ nav{
 }
 
 .contact h2{
-  font-size:clamp(2.6rem,5vw,5rem);
-  line-height:0.95;
-  letter-spacing:-0.06em;
+  font-size:clamp(2.8rem,6vw,5.5rem);
+  line-height:0.92;
+  letter-spacing:-0.07em;
   margin-bottom:24px;
-  max-width:700px;
+  max-width:780px;
 }
 
 .contact p{
-  max-width:520px;
+  max-width:540px;
   color:#9d9d9d;
-  margin-bottom:32px;
+  margin-bottom:34px;
 }
 
-.links{
+.contact-links{
   display:flex;
-  gap:20px;
   flex-wrap:wrap;
+  gap:24px;
 }
 
-.links a{
+.contact-links a{
+  font-size:0.95rem;
   border-bottom:1px solid #f5f5f4;
   padding-bottom:2px;
-  font-size:0.95rem;
+  transition:0.2s ease;
+}
+
+.contact-links a:hover{
+  opacity:0.7;
 }
 
 /* MOBILE */
 
-@media(max-width:950px){
-
-  .hero{
-    grid-template-columns:1fr;
-    gap:50px;
-  }
-
-  .work-grid{
-    grid-template-columns:1fr;
-  }
+@media(max-width:900px){
 
   .exp-grid{
     grid-template-columns:1fr;
@@ -329,16 +267,12 @@ nav{
     margin-bottom:100px;
   }
 
-  .hero-left h1{
-    font-size:3.7rem;
+  .hero h1{
+    font-size:3.9rem;
   }
 
   .section{
     margin-bottom:100px;
-  }
-
-  .work-card{
-    padding:26px;
   }
 
   .contact h2{
@@ -354,127 +288,46 @@ nav{
 
 <div class="container">
 
+<!-- NAV -->
+
 <nav>
   <div class="logo">
     OPHELIA HAKOBYAN
   </div>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
 
-  <div class="hero-left">
+  <h1>
+    Customer Support & Shopify Specialist
+  </h1>
 
-    <h1>
-      Customer Support & Shopify Specialist
-    </h1>
+  <p>
+    Technical support, Shopify operations, CRM workflows, and customer communication with a strong focus on organization, adaptability, and modern digital platforms.
+  </p>
 
-    <p>
-      Technical support, Shopify operations, CRM workflows, and customer communication with a strong focus on organization, adaptability, and modern digital platforms.
-    </p>
+  <div class="mini-code">
 
-  </div>
-
-  <div class="hero-right">
-
-    <div class="info">
-      <div class="info-label">Location</div>
-      <div class="info-text">Armenia · Open to remote opportunities</div>
-    </div>
-
-    <div class="info">
-      <div class="info-label">Languages</div>
-      <div class="info-text">
-        Armenian · English · Russian · Turkish
-      </div>
-    </div>
-
-    <div class="info">
-      <div class="info-label">Focus</div>
-      <div class="info-text">
-        Technical Support · Shopify · Client Operations · Web Support
-      </div>
-    </div>
+    <span>support_system.active()</span>
+    <span>shopify_workflow.ready</span>
+    <span>ui_focus = responsive</span>
 
   </div>
 
 </section>
 
-<section class="section">
-
-  <div class="section-top">
-
-    <div class="section-label">
-      Selected Work
-    </div>
-
-    <div class="section-title">
-      Practical digital support & storefront experience.
-    </div>
-
-  </div>
-
-  <div class="work-grid">
-
-    <div class="work-card">
-
-      <div class="work-small">
-        Shopify Storefront Support
-      </div>
-
-      <h3>
-        Store structure & responsive customization
-      </h3>
-
-      <p>
-        Worked on storefront organization, responsive adjustments, product setup, and front-end refinements for smoother customer experience.
-      </p>
-
-      <div class="tags">
-        <div class="tag">Shopify</div>
-        <div class="tag">HTML/CSS</div>
-        <div class="tag">Responsive UX</div>
-      </div>
-
-    </div>
-
-    <div class="work-card">
-
-      <div class="work-small">
-        Client Operations
-      </div>
-
-      <h3>
-        Customer communication & workflow coordination
-      </h3>
-
-      <p>
-        Managed communication workflows, CRM-related tasks, follow-ups, documentation, and operational coordination across customer-facing processes.
-      </p>
-
-      <div class="tags">
-        <div class="tag">CRM</div>
-        <div class="tag">Operations</div>
-        <div class="tag">Support</div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+<!-- EXPERIENCE -->
 
 <section class="section">
 
-  <div class="section-top">
+  <div class="section-label">
+    Experience
+  </div>
 
-    <div class="section-label">
-      Experience
-    </div>
-
-    <div class="section-title">
-      Professional background.
-    </div>
-
+  <div class="section-title">
+    Professional background.
   </div>
 
   <div class="exp-grid">
@@ -483,7 +336,7 @@ nav{
 
       <div class="exp-item">
 
-        <div class="exp-head">
+        <div class="exp-top">
           <div class="exp-role">Client Manager</div>
           <div class="exp-year">2025</div>
         </div>
@@ -500,7 +353,7 @@ nav{
 
       <div class="exp-item">
 
-        <div class="exp-head">
+        <div class="exp-top">
           <div class="exp-role">Account Manager</div>
           <div class="exp-year">2025</div>
         </div>
@@ -521,7 +374,7 @@ nav{
 
       <div class="exp-item">
 
-        <div class="exp-head">
+        <div class="exp-top">
           <div class="exp-role">Sales Specialist</div>
           <div class="exp-year">2023 — 2024</div>
         </div>
@@ -538,7 +391,7 @@ nav{
 
       <div class="exp-item">
 
-        <div class="exp-head">
+        <div class="exp-top">
           <div class="exp-role">1C Specialist</div>
           <div class="exp-year">2021</div>
         </div>
@@ -559,18 +412,16 @@ nav{
 
 </section>
 
+<!-- TOOLS -->
+
 <section class="section">
 
-  <div class="section-top">
+  <div class="section-label">
+    Tools & Platforms
+  </div>
 
-    <div class="section-label">
-      Tools & Platforms
-    </div>
-
-    <div class="section-title">
-      Daily workflow stack.
-    </div>
-
+  <div class="section-title">
+    Daily workflow stack.
   </div>
 
   <div class="tools">
@@ -585,19 +436,18 @@ nav{
     <div class="tool">CRM Platforms</div>
     <div class="tool">Canva</div>
     <div class="tool">Microsoft Office</div>
+    <div class="tool">Responsive Design</div>
 
   </div>
 
 </section>
 
+<!-- DEVELOPMENT -->
+
 <section class="section">
 
-  <div class="section-top">
-
-    <div class="section-label">
-      Professional Development
-    </div>
-
+  <div class="section-label">
+    Professional Development
   </div>
 
   <div class="dev-box">
@@ -614,6 +464,8 @@ nav{
 
 </section>
 
+<!-- CONTACT -->
+
 <section class="contact">
 
   <h2>
@@ -624,14 +476,18 @@ nav{
     Customer support, Shopify operations, technical support, and digital platform coordination roles.
   </p>
 
-  <div class="links">
+  <div class="contact-links">
 
-    <a href="mailto:hakobyanofelya98@gmail.com">
-      Email
+    <a href="mailto:yourgmail@gmail.com">
+      yourgmail@gmail.com
+    </a>
+
+    <a href="tel:+374XXXXXXXX">
+      +374 XX XXX XXX
     </a>
 
     <a href="https://www.upwork.com/" target="_blank">
-      Upwork
+      Upwork Profile
     </a>
 
   </div>
