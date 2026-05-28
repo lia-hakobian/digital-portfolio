@@ -25,7 +25,7 @@ html{
 
 body{
   background:#050505;
-  color:#f2f2f2;
+  color:#f3f3f3;
   font-family:'Inter',sans-serif;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
@@ -36,8 +36,8 @@ body::before{
   position:fixed;
   inset:0;
   background:
-  linear-gradient(rgba(188,205,123,0.015) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(188,205,123,0.015) 1px, transparent 1px);
+  linear-gradient(rgba(188,205,123,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(188,205,123,0.03) 1px, transparent 1px);
   background-size:72px 72px;
   pointer-events:none;
 }
@@ -49,9 +49,9 @@ a{
 
 .container{
   width:100%;
-  max-width:1480px;
+  max-width:1450px;
   margin:0 auto;
-  padding:34px 40px 70px;
+  padding:34px 42px 70px;
 }
 
 /* =========================
@@ -62,26 +62,31 @@ TOPBAR
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:90px;
+  margin-bottom:120px;
 }
 
 .brand{
-  font-size:0.92rem;
-  letter-spacing:0.26em;
+  font-size:0.95rem;
+  letter-spacing:0.22em;
   font-weight:500;
 }
 
 .nav{
   display:flex;
-  gap:54px;
+  gap:56px;
 }
 
 .nav a{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.72rem;
-  color:#d5d5d5;
-  padding-bottom:10px;
+  font-size:0.74rem;
+  color:#d7d7d7;
   position:relative;
+  padding-bottom:10px;
+  transition:0.2s ease;
+}
+
+.nav a:hover{
+  color:#bccd7b;
 }
 
 .nav a.active::after{
@@ -90,7 +95,7 @@ TOPBAR
   left:0;
   bottom:0;
   width:38px;
-  height:1px;
+  height:2px;
   background:#bccd7b;
 }
 
@@ -100,63 +105,63 @@ HERO
 
 .hero{
   display:grid;
-  grid-template-columns:1fr 0.9fr 0.7fr;
-  gap:30px;
-  align-items:center;
-  margin-bottom:110px;
+  grid-template-columns:1fr 0.8fr;
+  gap:90px;
+  align-items:start;
+  margin-bottom:130px;
 }
 
 /* LEFT */
 
 .hero-left{
   position:relative;
-  padding-left:55px;
+  padding-left:58px;
 }
 
 .side-line{
   position:absolute;
-  left:12px;
+  left:14px;
   top:0;
-  width:1px;
+  width:2px;
   height:100%;
-  background:rgba(188,205,123,0.12);
+  background:rgba(188,205,123,0.16);
 }
 
 .side-dot{
   position:absolute;
   left:8px;
   top:14px;
-  width:8px;
-  height:8px;
-  background:#bccd7b;
+  width:12px;
+  height:12px;
   border-radius:50%;
+  background:#bccd7b;
 }
 
 .side-text{
   position:absolute;
   left:-10px;
-  top:290px;
+  top:320px;
   transform:rotate(-90deg);
   transform-origin:left top;
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.66rem;
-  letter-spacing:0.14em;
+  font-size:0.68rem;
+  letter-spacing:0.16em;
   color:#777;
 }
 
 .hero-label{
   font-family:'IBM Plex Mono', monospace;
   color:#bccd7b;
-  font-size:0.72rem;
-  margin-bottom:24px;
+  font-size:0.8rem;
+  margin-bottom:28px;
 }
 
 .hero h1{
-  font-size:clamp(3.6rem,6vw,5.8rem);
+  font-size:clamp(4.2rem,6vw,6.5rem);
   line-height:0.9;
   font-weight:400;
   letter-spacing:-0.08em;
-  margin-bottom:26px;
+  margin-bottom:34px;
 }
 
 .hero h1 span{
@@ -164,11 +169,11 @@ HERO
 }
 
 .hero p{
-  max-width:420px;
-  color:#8f8f8f;
-  font-size:0.9rem;
-  line-height:1.9;
-  margin-bottom:32px;
+  max-width:520px;
+  color:#989898;
+  font-size:1rem;
+  line-height:1.95;
+  margin-bottom:38px;
 }
 
 .hero-link{
@@ -176,85 +181,14 @@ HERO
   align-items:center;
   gap:10px;
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.74rem;
+  font-size:0.76rem;
   border-bottom:1px solid #bccd7b;
   padding-bottom:7px;
+  transition:0.2s ease;
 }
 
-/* =========================
-CENTER
-========================= */
-
-.hero-center{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:430px;
-}
-
-.circle{
-  position:absolute;
-  width:290px;
-  height:290px;
-  border:1px dashed rgba(188,205,123,0.08);
-  border-radius:50%;
-}
-
-.line-v{
-  position:absolute;
-  width:1px;
-  height:380px;
-  background:rgba(188,205,123,0.08);
-}
-
-.line-h{
-  position:absolute;
-  width:380px;
-  height:1px;
-  background:rgba(188,205,123,0.08);
-}
-
-.corner{
-  position:absolute;
-  width:14px;
-  height:14px;
-  border-top:1px solid #bccd7b;
-  border-left:1px solid #bccd7b;
-}
-
-.c1{
-  top:96px;
-  left:78px;
-}
-
-.c2{
-  top:96px;
-  right:78px;
-  transform:rotate(90deg);
-}
-
-.c3{
-  bottom:96px;
-  left:78px;
-  transform:rotate(-90deg);
-}
-
-.c4{
-  bottom:96px;
-  right:78px;
-  transform:rotate(180deg);
-}
-
-/* =========================
-PISTACHIO
-========================= */
-
-.shell{
-  width:190px;
-  position:relative;
-  z-index:2;
-  filter:drop-shadow(0 0 12px rgba(188,205,123,0.12));
+.hero-link:hover{
+  color:#bccd7b;
 }
 
 /* =========================
@@ -262,61 +196,53 @@ RIGHT
 ========================= */
 
 .hero-right{
-  position:relative;
-  padding-left:28px;
-  border-left:1px solid rgba(188,205,123,0.08);
+  border-left:2px solid rgba(188,205,123,0.14);
+  padding-left:38px;
 }
 
 .note{
-  margin-bottom:36px;
-}
-
-.note-symbol{
-  color:#bccd7b;
-  font-size:0.8rem;
-  margin-bottom:8px;
-  font-family:'IBM Plex Mono', monospace;
+  margin-bottom:42px;
 }
 
 .note-title{
   font-family:'IBM Plex Mono', monospace;
   color:#bccd7b;
-  font-size:0.72rem;
+  font-size:0.78rem;
   letter-spacing:0.08em;
-  margin-bottom:6px;
+  margin-bottom:12px;
 }
 
 .note-text{
-  color:#7f7f7f;
-  font-size:0.8rem;
-  line-height:1.7;
-  max-width:210px;
+  max-width:280px;
+  color:#939393;
+  line-height:1.8;
+  font-size:0.94rem;
 }
 
 /* =========================
-SECTION
+SECTIONS
 ========================= */
 
 .section{
-  border-top:1px solid rgba(188,205,123,0.08);
-  padding-top:20px;
-  margin-bottom:80px;
+  border-top:2px solid rgba(188,205,123,0.12);
+  padding-top:24px;
+  margin-bottom:100px;
 }
 
 .section-title{
   font-family:'IBM Plex Mono', monospace;
   color:#bccd7b;
-  font-size:0.75rem;
-  margin-bottom:30px;
+  font-size:0.8rem;
+  margin-bottom:36px;
 }
 
 /* EXPERIENCE */
 
 .experience{
-  max-width:650px;
-  color:#909090;
+  max-width:760px;
+  color:#999;
   line-height:2;
-  font-size:0.92rem;
+  font-size:0.98rem;
 }
 
 /* TOOLS */
@@ -324,87 +250,78 @@ SECTION
 .tools{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  gap:18px;
 }
 
 .tool{
-  border:1px solid rgba(188,205,123,0.05);
-  min-height:78px;
-  padding:16px;
+  border:2px solid rgba(188,205,123,0.08);
+  min-height:95px;
+  padding:24px;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
+  text-align:center;
+  transition:0.2s ease;
 }
 
-.tool-symbol{
-  color:#bccd7b;
-  font-size:0.8rem;
-  margin-bottom:8px;
+.tool:hover{
+  border-color:rgba(188,205,123,0.24);
+  transform:translateY(-2px);
 }
 
 .tool-name{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.68rem;
-  text-align:center;
-  line-height:1.5;
+  font-size:0.78rem;
+  line-height:1.6;
+  color:#ececec;
 }
 
 /* DEVELOPMENT */
 
 .dev{
   display:grid;
-  grid-template-columns:70px 1fr;
-  gap:22px;
+  grid-template-columns:90px 1fr;
+  gap:30px;
   align-items:flex-start;
 }
 
 .dev-box{
-  width:64px;
-  height:64px;
-  border:1px solid rgba(188,205,123,0.1);
+  width:82px;
+  height:82px;
+  border:2px solid rgba(188,205,123,0.12);
   display:flex;
   justify-content:center;
   align-items:center;
   color:#bccd7b;
+  font-size:1.4rem;
 }
 
 .dev h3{
-  font-size:1.35rem;
+  font-size:1.65rem;
   font-weight:400;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .dev p{
-  max-width:540px;
-  color:#8d8d8d;
+  max-width:620px;
+  color:#979797;
   line-height:1.9;
-  font-size:0.9rem;
+  font-size:0.96rem;
 }
 
 /* FOOTER */
 
 footer{
-  border-top:1px solid rgba(188,205,123,0.08);
-  padding-top:34px;
+  border-top:2px solid rgba(188,205,123,0.12);
+  padding-top:40px;
   display:grid;
-  grid-template-columns:1fr 0.7fr;
-  gap:40px;
+  grid-template-columns:1fr 0.8fr;
+  gap:50px;
   align-items:center;
-}
-
-.footer-left{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.footer-shell{
-  width:64px;
 }
 
 .footer-text{
-  font-size:1.8rem;
+  font-size:2rem;
   line-height:1.08;
   letter-spacing:-0.06em;
   font-weight:300;
@@ -417,13 +334,18 @@ footer{
 .footer-links{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:18px;
 }
 
 .footer-links a{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.72rem;
-  color:#d5d5d5;
+  font-size:0.76rem;
+  color:#d9d9d9;
+  transition:0.2s ease;
+}
+
+.footer-links a:hover{
+  color:#bccd7b;
 }
 
 /* =========================
@@ -463,15 +385,11 @@ MOBILE
   }
 
   .hero-left{
-    padding-left:38px;
+    padding-left:42px;
   }
 
   .hero h1{
-    font-size:3.3rem;
-  }
-
-  .shell{
-    width:150px;
+    font-size:3.5rem;
   }
 
   .tools{
@@ -479,7 +397,7 @@ MOBILE
   }
 
   .footer-text{
-    font-size:1.45rem;
+    font-size:1.55rem;
   }
 
 }
@@ -550,106 +468,11 @@ MOBILE
 
   </div>
 
-  <!-- CENTER -->
-
-  <div class="hero-center">
-
-    <div class="circle"></div>
-
-    <div class="line-v"></div>
-    <div class="line-h"></div>
-
-    <div class="corner c1"></div>
-    <div class="corner c2"></div>
-    <div class="corner c3"></div>
-    <div class="corner c4"></div>
-
-    <!-- PISTACHIO -->
-
-    <svg class="shell" viewBox="0 0 500 500" fill="none">
-
-      <!-- LEFT -->
-
-      <path d="
-      M250 70
-      C188 110 150 180 154 255
-      C158 330 198 388 250 425"
-      stroke="#BCCD7B"
-      stroke-width="4"
-      stroke-linecap="round"/>
-
-      <!-- RIGHT -->
-
-      <path d="
-      M250 70
-      C312 110 350 180 346 255
-      C342 330 302 388 250 425"
-      stroke="#BCCD7B"
-      stroke-width="4"
-      stroke-linecap="round"/>
-
-      <!-- INNER -->
-
-      <path d="
-      M250 128
-      C220 170 210 220 214 268
-      C218 315 230 348 250 378"
-      stroke="#BCCD7B"
-      stroke-width="3"
-      stroke-linecap="round"/>
-
-      <path d="
-      M250 128
-      C280 170 290 220 286 268
-      C282 315 270 348 250 378"
-      stroke="#BCCD7B"
-      stroke-width="3"
-      stroke-linecap="round"/>
-
-      <!-- CRACK -->
-
-      <path d="
-      M250 92
-      L242 138
-      L254 180
-      L244 225
-      L257 270
-      L246 318
-      L255 355
-      L250 390"
-      stroke="#BCCD7B"
-      stroke-width="2.5"
-      stroke-linecap="round"/>
-
-      <!-- PIECES -->
-
-      <path d="M145 350L160 342L166 356L150 364Z"
-      stroke="#BCCD7B"
-      stroke-width="2.5"/>
-
-      <path d="M175 378L188 370L194 384L180 392Z"
-      stroke="#BCCD7B"
-      stroke-width="2.5"/>
-
-      <path d="M322 378L336 370L344 384L328 392Z"
-      stroke="#BCCD7B"
-      stroke-width="2.5"/>
-
-      <path d="M350 350L366 340L374 356L358 366Z"
-      stroke="#BCCD7B"
-      stroke-width="2.5"/>
-
-    </svg>
-
-  </div>
-
   <!-- RIGHT -->
 
   <div class="hero-right">
 
     <div class="note">
-
-      <div class="note-symbol">◌</div>
 
       <div class="note-title">
         SHOPIFY SYSTEMS
@@ -663,8 +486,6 @@ MOBILE
 
     <div class="note">
 
-      <div class="note-symbol">◇</div>
-
       <div class="note-title">
         CLIENT COMMUNICATION
       </div>
@@ -677,8 +498,6 @@ MOBILE
 
     <div class="note">
 
-      <div class="note-symbol">│</div>
-
       <div class="note-title">
         DIGITAL WORKFLOWS
       </div>
@@ -690,8 +509,6 @@ MOBILE
     </div>
 
     <div class="note">
-
-      <div class="note-symbol">⬡</div>
 
       <div class="note-title">
         TECHNICAL ADAPTABILITY
@@ -732,62 +549,50 @@ MOBILE
   <div class="tools">
 
     <div class="tool">
-      <div class="tool-symbol">◌</div>
       <div class="tool-name">Shopify</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">◇</div>
       <div class="tool-name">WordPress</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">⌘</div>
       <div class="tool-name">GitHub</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">✦</div>
       <div class="tool-name">Slack</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">◆</div>
       <div class="tool-name">Jira</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">◎</div>
       <div class="tool-name">CRM Platforms</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">&lt;/&gt;</div>
       <div class="tool-name">HTML / CSS</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">JS</div>
       <div class="tool-name">JavaScript</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">▣</div>
       <div class="tool-name">Responsive Design</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">▦</div>
       <div class="tool-name">Microsoft Office</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">◍</div>
       <div class="tool-name">Canva</div>
     </div>
 
     <div class="tool">
-      <div class="tool-symbol">◈</div>
       <div class="tool-name">UX / UI Principles</div>
     </div>
 
@@ -829,46 +634,9 @@ MOBILE
 
 <footer id="contact">
 
-  <div class="footer-left">
-
-    <svg class="footer-shell" viewBox="0 0 500 500" fill="none">
-
-      <path d="
-      M250 70
-      C188 110 150 180 154 255
-      C158 330 198 388 250 425"
-      stroke="#BCCD7B"
-      stroke-width="4"
-      stroke-linecap="round"/>
-
-      <path d="
-      M250 70
-      C312 110 350 180 346 255
-      C342 330 302 388 250 425"
-      stroke="#BCCD7B"
-      stroke-width="4"
-      stroke-linecap="round"/>
-
-      <path d="
-      M250 92
-      L242 138
-      L254 180
-      L244 225
-      L257 270
-      L246 318
-      L255 355
-      L250 390"
-      stroke="#BCCD7B"
-      stroke-width="2.5"
-      stroke-linecap="round"/>
-
-    </svg>
-
-    <div class="footer-text">
-      Structured communication &<br>
-      digital <span>adaptability.</span>
-    </div>
-
+  <div class="footer-text">
+    Structured communication &<br>
+    digital <span>adaptability.</span>
   </div>
 
   <div class="footer-links">
