@@ -1,716 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- REPLACE ONLY THE HERO + TOP SECTION WITH THIS -->
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<section class="hero-grid">
 
-<title>Ophelia Hakobyan</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#090909;
-  color:#f5f5f5;
-  font-family:'Inter',sans-serif;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-  linear-gradient(rgba(163,181,120,0.035) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(163,181,120,0.035) 1px, transparent 1px);
-  background-size:70px 70px;
-  pointer-events:none;
-  opacity:0.3;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:100%;
-  max-width:1350px;
-  margin:0 auto;
-  padding:40px 34px 80px;
-  position:relative;
-  z-index:2;
-}
-
-/* NAV */
-
-nav{
-  margin-bottom:120px;
-}
-
-.name-wrap{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.name-top{
-  font-family:'IBM Plex Mono', monospace;
-  color:#7f8d5d;
-  font-size:0.78rem;
-  letter-spacing:0.12em;
-}
-
-.logo-name{
-  font-size:1.2rem;
-  line-height:1.2;
-  letter-spacing:0.28em;
-  font-weight:700;
-}
-
-/* HERO */
-
-.hero{
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:80px;
-  align-items:center;
-  margin-bottom:150px;
-  position:relative;
-}
-
-.hero-left{
-  position:relative;
-}
-
-.hero-left::before{
-  content:"";
-  position:absolute;
-  left:-30px;
-  top:0;
-  width:1px;
-  height:100%;
-  background:rgba(163,181,120,0.18);
-}
-
-.hero h1{
-  font-size:clamp(4.5rem,9vw,8rem);
-  line-height:0.9;
-  letter-spacing:-0.08em;
-  font-weight:700;
-  margin-bottom:34px;
-}
-
-.hero h1 span{
-  color:#a3b578;
-}
-
-.hero p{
-  max-width:620px;
-  color:#9a9a9a;
-  font-size:1rem;
-  line-height:1.8;
-}
-
-.mini-lines{
-  margin-top:42px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.mini-lines span{
-  font-family:'IBM Plex Mono', monospace;
-  color:#7e7e7e;
-  font-size:0.82rem;
-}
-
-/* SHELL */
-
-.shell-side{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:600px;
-}
-
-.shell-side::before{
-  content:"";
-  position:absolute;
-  width:420px;
-  height:420px;
-  border:1px solid rgba(163,181,120,0.08);
-  border-radius:50%;
-}
-
-.shell-side::after{
-  content:"";
-  position:absolute;
-  width:540px;
-  height:1px;
-  background:rgba(163,181,120,0.08);
-}
-
-.shell-wrap{
-  position:relative;
-  width:260px;
-  height:340px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.shell{
-  width:220px;
-  opacity:0.96;
-  filter:drop-shadow(0 0 18px rgba(163,181,120,0.16));
-}
-
-/* FRAGMENTS */
-
-.fragment{
-  position:absolute;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.fragment-line{
-  width:46px;
-  height:1px;
-  background:#a3b578;
-  opacity:0.5;
-}
-
-.fragment p{
-  font-family:'IBM Plex Mono', monospace;
-  color:#a7a7a7;
-  font-size:0.74rem;
-  line-height:1.6;
-}
-
-.frag-1{
-  top:20px;
-  right:-40px;
-}
-
-.frag-2{
-  top:150px;
-  left:-120px;
-}
-
-.frag-3{
-  bottom:130px;
-  right:-70px;
-}
-
-.frag-4{
-  bottom:20px;
-  left:-80px;
-}
-
-/* ABOUT */
-
-.about{
-  margin-bottom:140px;
-}
-
-.section-line{
-  width:100%;
-  height:1px;
-  background:rgba(163,181,120,0.12);
-  margin-bottom:28px;
-}
-
-.section-label{
-  font-family:'IBM Plex Mono', monospace;
-  color:#7f8d5d;
-  font-size:0.76rem;
-  letter-spacing:0.12em;
-  margin-bottom:26px;
-}
-
-.about p{
-  max-width:920px;
-  font-size:1.35rem;
-  line-height:1.8;
-  color:#d2d2d2;
-  font-weight:300;
-}
-
-/* TOOLS */
-
-.tools-section{
-  margin-bottom:140px;
-}
-
-.tools-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:40px;
-}
-
-.tool-block{
-  border-top:1px solid rgba(163,181,120,0.12);
-  padding-top:18px;
-}
-
-.tool-block h3{
-  font-family:'IBM Plex Mono', monospace;
-  color:#a3b578;
-  font-size:0.82rem;
-  margin-bottom:22px;
-  letter-spacing:0.08em;
-}
-
-.tool-list{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.tool-list span{
-  color:#d0d0d0;
-  font-size:0.96rem;
-}
-
-/* DEVELOPMENT */
-
-.development{
-  margin-bottom:140px;
-}
-
-.dev-wrap{
-  border:1px solid rgba(163,181,120,0.12);
-  padding:42px;
-  position:relative;
-}
-
-.dev-wrap::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:1px;
-  height:100%;
-  background:rgba(163,181,120,0.12);
-}
-
-.dev-wrap h2{
-  font-size:2rem;
-  margin-bottom:18px;
-  font-weight:600;
-  letter-spacing:-0.04em;
-}
-
-.dev-wrap p{
-  max-width:760px;
-  color:#a0a0a0;
-  line-height:1.8;
-}
-
-/* FOOTER */
-
-footer{
-  padding-top:60px;
-  border-top:1px solid rgba(163,181,120,0.12);
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:40px;
-}
-
-.footer-left{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-
-.footer-left h2{
-  font-size:3rem;
-  line-height:1;
-  letter-spacing:-0.06em;
-  font-weight:600;
-  max-width:500px;
-}
-
-.footer-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:24px;
-}
-
-.footer-links a{
-  font-family:'IBM Plex Mono', monospace;
-  color:#d0d0d0;
-  font-size:0.82rem;
-  border-bottom:1px solid rgba(163,181,120,0.4);
-  padding-bottom:4px;
-  transition:0.2s ease;
-}
-
-.footer-links a:hover{
-  color:#a3b578;
-}
-
-.footer-shell{
-  width:90px;
-  opacity:0.9;
-}
-
-/* MOBILE */
-
-@media(max-width:1000px){
-
-  .hero{
-    grid-template-columns:1fr;
-    gap:120px;
-  }
-
-  .shell-side{
-    min-height:auto;
-  }
-
-  .tools-grid{
-    grid-template-columns:1fr;
-  }
-
-  footer{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-}
-
-@media(max-width:640px){
-
-  .container{
-    padding:24px 18px 60px;
-  }
-
-  nav{
-    margin-bottom:90px;
-  }
-
-  .hero{
-    margin-bottom:100px;
-  }
-
-  .hero h1{
-    font-size:4rem;
-  }
-
-  .about p{
-    font-size:1.05rem;
-  }
-
-  .dev-wrap{
-    padding:28px;
-  }
-
-  .footer-left h2{
-    font-size:2.3rem;
-  }
-
-  .fragment{
-    display:none;
-  }
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- NAV -->
-
-<nav>
-
-  <div class="name-wrap">
-
-    <div class="name-top">
-      DIGITAL PROFILE
-    </div>
-
-    <div class="logo-name">
-      OPHELIA<br>
-      HAKOBYAN
-    </div>
-
-  </div>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
+  <!-- LEFT -->
 
   <div class="hero-left">
 
+    <div class="intro-label">
+      INTRO
+    </div>
+
     <h1>
-      Customer Support & <span>Shopify</span> Specialist
+      Customer<br>
+      Support &<br>
+      <span>Shopify</span><br>
+      Specialist
     </h1>
 
-    <p>
-      Customer Support & Shopify Specialist with experience in client communication, CRM management, digital platform support, and troubleshooting. Skilled in adapting quickly to modern systems and fast-paced environments with a structured and customer-focused approach.
+    <p class="hero-text">
+      Customer Support & Shopify Specialist with experience in client communication, CRM management, digital platform support, and troubleshooting. Skilled in adapting quickly to modern systems with a structured and customer-focused approach.
     </p>
 
-    <div class="mini-lines">
+    <a
+      href="https://www.upwork.com/freelancers/~01b53803e51f4f0246"
+      target="_blank"
+      class="hero-link"
+    >
+      PROFESSIONAL PROFILE →
+    </a>
 
-      <span>workflow stability</span>
-      <span>responsive systems</span>
-      <span>digital operations</span>
+  </div>
 
+  <!-- CENTER -->
+
+  <div class="shell-center">
+
+    <div class="shell-cross"></div>
+
+    <!-- PISTACHIO SHELL -->
+
+    <svg class="pistachio-shell" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <path d="M150 22L245 150L185 320L150 390L115 320L55 150L150 22Z"
+      stroke="#B7C97B"
+      stroke-width="4"/>
+
+      <path d="M150 85L205 160L170 285L150 330L130 285L95 160L150 85Z"
+      stroke="#B7C97B"
+      stroke-width="4"/>
+
+      <path d="M150 40V320"
+      stroke="#B7C97B"
+      stroke-width="3"/>
+
+      <!-- BROKEN PIECES -->
+
+      <path d="M42 350L58 342L66 360L48 368Z"
+      stroke="#B7C97B"
+      stroke-width="3"/>
+
+      <path d="M78 372L90 364L98 376L82 384Z"
+      stroke="#B7C97B"
+      stroke-width="3"/>
+
+      <path d="M228 360L244 350L252 368L234 378Z"
+      stroke="#B7C97B"
+      stroke-width="3"/>
+
+      <path d="M258 332L272 324L280 340L264 348Z"
+      stroke="#B7C97B"
+      stroke-width="3"/>
+
+    </svg>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="hero-right">
+
+    <div class="status-title">
+      DIGITAL PROFILE
     </div>
 
-  </div>
+    <div class="status-list">
 
-  <!-- SHELL -->
-
-  <div class="shell-side">
-
-    <div class="shell-wrap">
-
-      <!-- FRAGMENTS -->
-
-      <div class="fragment frag-1">
-        <div class="fragment-line"></div>
-        <p>adaptability</p>
+      <div class="status-row">
+        <span>adaptability</span>
+        <span>high</span>
       </div>
 
-      <div class="fragment frag-2">
-        <p>communication</p>
-        <div class="fragment-line"></div>
+      <div class="status-row">
+        <span>communication</span>
+        <span>structured</span>
       </div>
 
-      <div class="fragment frag-3">
-        <div class="fragment-line"></div>
-        <p>structure</p>
+      <div class="status-row">
+        <span>workflow</span>
+        <span>stable</span>
       </div>
 
-      <div class="fragment frag-4">
-        <p>digital mindset</p>
-        <div class="fragment-line"></div>
-      </div>
-
-      <!-- SHELL SVG -->
-
-      <svg class="shell" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-        <path d="M150 22L245 150L185 320L150 390L115 320L55 150L150 22Z"
-        stroke="#A3B578"
-        stroke-width="4"/>
-
-        <path d="M150 85L205 160L170 285L150 330L130 285L95 160L150 85Z"
-        stroke="#A3B578"
-        stroke-width="4"/>
-
-        <path d="M150 40V320"
-        stroke="#A3B578"
-        stroke-width="3"/>
-
-        <!-- BROKEN PIECES -->
-
-        <path d="M42 350L58 342L66 360L48 368Z"
-        stroke="#A3B578"
-        stroke-width="3"/>
-
-        <path d="M78 372L90 364L98 376L82 384Z"
-        stroke="#A3B578"
-        stroke-width="3"/>
-
-        <path d="M228 360L244 350L252 368L234 378Z"
-        stroke="#A3B578"
-        stroke-width="3"/>
-
-        <path d="M258 332L272 324L280 340L264 348Z"
-        stroke="#A3B578"
-        stroke-width="3"/>
-
-      </svg>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about">
-
-  <div class="section-line"></div>
-
-  <div class="section-label">
-    PROFESSIONAL PROFILE
-  </div>
-
-  <p>
-    Background in customer communication, sales support, digital workflows, and operational coordination across fast-paced environments. Comfortable working with modern platforms, adapting to technical systems, and maintaining structured communication with a customer-focused mindset.
-  </p>
-
-</section>
-
-<!-- TOOLS -->
-
-<section class="tools-section">
-
-  <div class="section-line"></div>
-
-  <div class="section-label">
-    TOOLS & SYSTEMS
-  </div>
-
-  <div class="tools-grid">
-
-    <div class="tool-block">
-
-      <h3>
-        Platforms
-      </h3>
-
-      <div class="tool-list">
-
-        <span>Shopify</span>
-        <span>WordPress</span>
-        <span>GitHub</span>
-
+      <div class="status-row">
+        <span>digital mindset</span>
+        <span>active</span>
       </div>
 
     </div>
 
-    <div class="tool-block">
-
-      <h3>
-        Communication
-      </h3>
-
-      <div class="tool-list">
-
-        <span>Slack</span>
-        <span>CRM Platforms</span>
-        <span>Microsoft Office</span>
-
-      </div>
-
-    </div>
-
-    <div class="tool-block">
-
-      <h3>
-        Technical
-      </h3>
-
-      <div class="tool-list">
-
-        <span>HTML / CSS</span>
-        <span>JavaScript</span>
-        <span>Responsive Design</span>
-
-      </div>
-
+    <div class="status-note">
+      // always improving
     </div>
 
   </div>
 
 </section>
-
-<!-- DEVELOPMENT -->
-
-<section class="development">
-
-  <div class="section-line"></div>
-
-  <div class="section-label">
-    PROFESSIONAL DEVELOPMENT
-  </div>
-
-  <div class="dev-wrap">
-
-    <h2>
-      Shopify Storefront & E-commerce Training
-    </h2>
-
-    <p>
-      Focused on storefront structure, responsive UX principles, Shopify workflows, and practical digital operations with a strong emphasis on adaptability and customer experience.
-    </p>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="footer-left">
-
-    <h2>
-      Professional Profile
-    </h2>
-
-    <div class="footer-links">
-
-      <a href="mailto:hakobyanofelya988@gmail.com">
-        hakobyanofelya988@gmail.com
-      </a>
-
-      <a href="tel:+37498086989">
-        +374 98 086 989
-      </a>
-
-      <a
-        href="https://www.upwork.com/freelancers/~01b53803e51f4f0246"
-        target="_blank"
-      >
-        Upwork Profile
-      </a>
-
-    </div>
-
-  </div>
-
-  <svg class="footer-shell" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-    <path d="M150 22L245 150L185 320L150 390L115 320L55 150L150 22Z"
-    stroke="#A3B578"
-    stroke-width="6"/>
-
-    <path d="M150 85L205 160L170 285L150 330L130 285L95 160L150 85Z"
-    stroke="#A3B578"
-    stroke-width="6"/>
-
-    <path d="M150 40V320"
-    stroke="#A3B578"
-    stroke-width="5"/>
-
-  </svg>
-
-</footer>
-
-</div>
-
-</body>
-</html>
