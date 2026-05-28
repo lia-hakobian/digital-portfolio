@@ -1,12 +1,547 @@
-<!-- REPLACE ONLY THE HERO + TOP SECTION WITH THIS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<section class="hero-grid">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- LEFT -->
+<title>Ophelia Hakobyan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#070707;
+  color:#f3f3f3;
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+  linear-gradient(rgba(182,201,123,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(182,201,123,0.03) 1px, transparent 1px);
+  background-size:70px 70px;
+  pointer-events:none;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:100%;
+  max-width:1500px;
+  margin:0 auto;
+  padding:40px 40px 80px;
+}
+
+/* NAV */
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:90px;
+}
+
+.brand{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.brand svg{
+  width:42px;
+  min-width:42px;
+  filter:drop-shadow(0 0 10px rgba(182,201,123,0.15));
+}
+
+.brand-name{
+  font-size:1.05rem;
+  line-height:1.4;
+  letter-spacing:0.22em;
+  font-weight:500;
+}
+
+.nav-links{
+  display:flex;
+  gap:90px;
+}
+
+.nav-item{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.nav-item span{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  color:#8f8f8f;
+}
+
+.nav-item strong{
+  font-size:0.92rem;
+  font-weight:500;
+}
+
+.active-line{
+  width:48px;
+  height:2px;
+  background:#b6c97b;
+}
+
+/* HERO */
+
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr 0.7fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:120px;
+}
+
+.hero-left{
+  position:relative;
+  padding-left:70px;
+}
+
+.vertical-line{
+  position:absolute;
+  left:20px;
+  top:0;
+  width:1px;
+  height:100%;
+  background:rgba(182,201,123,0.15);
+}
+
+.vertical-text{
+  position:absolute;
+  left:-12px;
+  top:180px;
+  transform:rotate(-90deg);
+  transform-origin:left top;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.14em;
+  color:#a3a3a3;
+}
+
+.hero-label{
+  font-family:'IBM Plex Mono', monospace;
+  color:#b6c97b;
+  font-size:0.78rem;
+  margin-bottom:26px;
+}
+
+.hero h1{
+  font-size:clamp(5rem,8vw,8rem);
+  line-height:0.9;
+  font-weight:400;
+  letter-spacing:-0.08em;
+  margin-bottom:34px;
+}
+
+.hero h1 span{
+  color:#b6c97b;
+}
+
+.hero p{
+  max-width:520px;
+  color:#9d9d9d;
+  line-height:1.9;
+  font-size:1rem;
+  margin-bottom:40px;
+}
+
+.hero-link{
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.84rem;
+  color:#f3f3f3;
+  border-bottom:1px solid #b6c97b;
+  padding-bottom:8px;
+}
+
+.hero-link:hover{
+  color:#b6c97b;
+}
+
+/* CENTER SYMBOL */
+
+.hero-center{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:500px;
+}
+
+.center-circle{
+  position:absolute;
+  width:330px;
+  height:330px;
+  border:1px dashed rgba(182,201,123,0.16);
+  border-radius:50%;
+}
+
+.center-cross-v{
+  position:absolute;
+  width:1px;
+  height:470px;
+  background:rgba(182,201,123,0.12);
+}
+
+.center-cross-h{
+  position:absolute;
+  width:470px;
+  height:1px;
+  background:rgba(182,201,123,0.12);
+}
+
+.shell{
+  width:220px;
+  position:relative;
+  z-index:2;
+  filter:drop-shadow(0 0 20px rgba(182,201,123,0.16));
+}
+
+/* RIGHT PANEL */
+
+.hero-right{
+  border-left:1px solid rgba(182,201,123,0.12);
+  padding-left:34px;
+}
+
+.panel-title{
+  font-family:'IBM Plex Mono', monospace;
+  color:#b6c97b;
+  font-size:0.8rem;
+  margin-bottom:26px;
+}
+
+.panel{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-bottom:30px;
+}
+
+.panel-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.8rem;
+}
+
+.panel-row span:first-child{
+  color:#d0d0d0;
+}
+
+.panel-row span:last-child{
+  color:#b6c97b;
+}
+
+.panel-note{
+  font-family:'IBM Plex Mono', monospace;
+  color:#7e7e7e;
+  font-size:0.76rem;
+}
+
+/* EXPERIENCE */
+
+.section{
+  margin-bottom:120px;
+}
+
+.section-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+  border-top:1px solid rgba(182,201,123,0.12);
+  padding-top:20px;
+}
+
+.section-title{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  color:#b6c97b;
+}
+
+.view-all{
+  font-family:'IBM Plex Mono', monospace;
+  color:#b6c97b;
+  font-size:0.82rem;
+}
+
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+.exp-card{
+  border-left:1px solid rgba(182,201,123,0.12);
+  padding-left:22px;
+}
+
+.exp-card h3{
+  font-size:1.5rem;
+  font-weight:400;
+  margin-bottom:14px;
+}
+
+.exp-card p{
+  color:#9b9b9b;
+  line-height:1.9;
+  font-size:0.96rem;
+}
+
+/* TOOLS */
+
+.tools-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+}
+
+.tools-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.tool{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.84rem;
+  color:#d4d4d4;
+  border-bottom:1px solid rgba(182,201,123,0.12);
+  padding-bottom:14px;
+}
+
+/* DEVELOPMENT */
+
+.dev-box{
+  border-left:1px solid rgba(182,201,123,0.12);
+  padding-left:24px;
+}
+
+.dev-box h3{
+  font-size:1.8rem;
+  font-weight:400;
+  margin-bottom:16px;
+}
+
+.dev-box p{
+  color:#9d9d9d;
+  line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid rgba(182,201,123,0.12);
+  padding-top:50px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.footer-shell{
+  width:120px;
+}
+
+.footer-text{
+  font-size:3.4rem;
+  line-height:1.05;
+  letter-spacing:-0.06em;
+  font-weight:300;
+}
+
+.footer-text span{
+  color:#b6c97b;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.footer-links a{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.84rem;
+  color:#d7d7d7;
+}
+
+.footer-links a:hover{
+  color:#b6c97b;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:80px;
+  }
+
+  .experience-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .tools-grid{
+    grid-template-columns:1fr;
+  }
+
+  footer{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .container{
+    padding:24px 18px 60px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-left{
+    padding-left:40px;
+  }
+
+  .hero h1{
+    font-size:4.5rem;
+  }
+
+  .experience-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tools-list{
+    grid-template-columns:1fr;
+  }
+
+  .footer-text{
+    font-size:2.4rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- TOP -->
+
+<div class="topbar">
+
+  <div class="brand">
+
+    <!-- PISTACHIO SHELL -->
+
+    <svg viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <path d="M150 22L245 150L185 320L150 390L115 320L55 150L150 22Z"
+      stroke="#B6C97B"
+      stroke-width="7"/>
+
+      <path d="M150 85L205 160L170 285L150 330L130 285L95 160L150 85Z"
+      stroke="#B6C97B"
+      stroke-width="7"/>
+
+      <path d="M150 40V320"
+      stroke="#B6C97B"
+      stroke-width="5"/>
+
+    </svg>
+
+    <div class="brand-name">
+      OPHELIA<br>
+      HAKOBYAN
+    </div>
+
+  </div>
+
+  <div class="nav-links">
+
+    <div class="nav-item">
+      <span>01</span>
+      <strong>ABOUT</strong>
+      <div class="active-line"></div>
+    </div>
+
+    <div class="nav-item">
+      <span>02</span>
+      <strong>EXPERIENCE</strong>
+    </div>
+
+    <div class="nav-item">
+      <span>03</span>
+      <strong>SKILLS</strong>
+    </div>
+
+    <div class="nav-item">
+      <span>04</span>
+      <strong>CONTACT</strong>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
 
   <div class="hero-left">
 
-    <div class="intro-label">
+    <div class="vertical-line"></div>
+
+    <div class="vertical-text">
+      AVAILABLE FOR OPPORTUNITIES
+    </div>
+
+    <div class="hero-label">
       INTRO
     </div>
 
@@ -17,7 +552,7 @@
       Specialist
     </h1>
 
-    <p class="hero-text">
+    <p>
       Customer Support & Shopify Specialist with experience in client communication, CRM management, digital platform support, and troubleshooting. Skilled in adapting quickly to modern systems with a structured and customer-focused approach.
     </p>
 
@@ -33,43 +568,45 @@
 
   <!-- CENTER -->
 
-  <div class="shell-center">
+  <div class="hero-center">
 
-    <div class="shell-cross"></div>
+    <div class="center-circle"></div>
+    <div class="center-cross-v"></div>
+    <div class="center-cross-h"></div>
 
-    <!-- PISTACHIO SHELL -->
+    <!-- SHELL -->
 
-    <svg class="pistachio-shell" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="shell" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
 
       <path d="M150 22L245 150L185 320L150 390L115 320L55 150L150 22Z"
-      stroke="#B7C97B"
-      stroke-width="4"/>
+      stroke="#B6C97B"
+      stroke-width="5"/>
 
       <path d="M150 85L205 160L170 285L150 330L130 285L95 160L150 85Z"
-      stroke="#B7C97B"
-      stroke-width="4"/>
+      stroke="#B6C97B"
+      stroke-width="5"/>
 
       <path d="M150 40V320"
-      stroke="#B7C97B"
-      stroke-width="3"/>
+      stroke="#B6C97B"
+      stroke-width="4"/>
 
       <!-- BROKEN PIECES -->
 
       <path d="M42 350L58 342L66 360L48 368Z"
-      stroke="#B7C97B"
-      stroke-width="3"/>
+      stroke="#B6C97B"
+      stroke-width="4"/>
 
       <path d="M78 372L90 364L98 376L82 384Z"
-      stroke="#B7C97B"
-      stroke-width="3"/>
+      stroke="#B6C97B"
+      stroke-width="4"/>
 
       <path d="M228 360L244 350L252 368L234 378Z"
-      stroke="#B7C97B"
-      stroke-width="3"/>
+      stroke="#B6C97B"
+      stroke-width="4"/>
 
       <path d="M258 332L272 324L280 340L264 348Z"
-      stroke="#B7C97B"
-      stroke-width="3"/>
+      stroke="#B6C97B"
+      stroke-width="4"/>
 
     </svg>
 
@@ -79,38 +616,225 @@
 
   <div class="hero-right">
 
-    <div class="status-title">
+    <div class="panel-title">
       DIGITAL PROFILE
     </div>
 
-    <div class="status-list">
+    <div class="panel">
 
-      <div class="status-row">
+      <div class="panel-row">
         <span>adaptability</span>
         <span>high</span>
       </div>
 
-      <div class="status-row">
+      <div class="panel-row">
         <span>communication</span>
         <span>structured</span>
       </div>
 
-      <div class="status-row">
+      <div class="panel-row">
         <span>workflow</span>
         <span>stable</span>
       </div>
 
-      <div class="status-row">
+      <div class="panel-row">
         <span>digital mindset</span>
         <span>active</span>
       </div>
 
     </div>
 
-    <div class="status-note">
+    <div class="panel-note">
       // always improving
     </div>
 
   </div>
 
 </section>
+
+<!-- EXPERIENCE -->
+
+<section class="section">
+
+  <div class="section-top">
+
+    <div class="section-title">
+      EXPERIENCE
+    </div>
+
+  </div>
+
+  <div class="experience-grid">
+
+    <div class="exp-card">
+
+      <h3>
+        Customer Communication
+      </h3>
+
+      <p>
+        Experience working directly with clients, handling communication, coordination, and customer-focused interactions across fast-paced environments.
+      </p>
+
+    </div>
+
+    <div class="exp-card">
+
+      <h3>
+        Digital Operations
+      </h3>
+
+      <p>
+        Background in CRM workflows, operational organization, and adapting to modern digital systems with structured execution.
+      </p>
+
+    </div>
+
+    <div class="exp-card">
+
+      <h3>
+        Sales & Support
+      </h3>
+
+      <p>
+        Combined sales and support experience with a focus on communication, responsiveness, and maintaining smooth workflows.
+      </p>
+
+    </div>
+
+    <div class="exp-card">
+
+      <h3>
+        Technical Adaptability
+      </h3>
+
+      <p>
+        Comfortable learning new systems, troubleshooting issues, and supporting digital storefront and platform operations.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section class="section">
+
+  <div class="section-top">
+
+    <div class="section-title">
+      TOOLS & PLATFORMS
+    </div>
+
+  </div>
+
+  <div class="tools-grid">
+
+    <div class="tools-list">
+
+      <div class="tool">Shopify</div>
+      <div class="tool">WordPress</div>
+      <div class="tool">GitHub</div>
+      <div class="tool">Slack</div>
+      <div class="tool">Jira</div>
+      <div class="tool">CRM Platforms</div>
+
+    </div>
+
+    <div class="tools-list">
+
+      <div class="tool">HTML / CSS</div>
+      <div class="tool">JavaScript</div>
+      <div class="tool">Responsive Design</div>
+      <div class="tool">Microsoft Office</div>
+      <div class="tool">Canva</div>
+      <div class="tool">UX / UI Principles</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DEVELOPMENT -->
+
+<section class="section">
+
+  <div class="section-top">
+
+    <div class="section-title">
+      PROFESSIONAL DEVELOPMENT
+    </div>
+
+  </div>
+
+  <div class="dev-box">
+
+    <h3>
+      Success Academy
+    </h3>
+
+    <p>
+      Shopify Storefront & E-commerce Training focused on storefront structure, responsive UX principles, digital workflows, and practical platform operations.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-left">
+
+    <svg class="footer-shell" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <path d="M150 22L245 150L185 320L150 390L115 320L55 150L150 22Z"
+      stroke="#B6C97B"
+      stroke-width="6"/>
+
+      <path d="M150 85L205 160L170 285L150 330L130 285L95 160L150 85Z"
+      stroke="#B6C97B"
+      stroke-width="6"/>
+
+      <path d="M150 40V320"
+      stroke="#B6C97B"
+      stroke-width="5"/>
+
+    </svg>
+
+    <div class="footer-text">
+      Customer support &<br>
+      digital <span>operations.</span>
+    </div>
+
+  </div>
+
+  <div class="footer-links">
+
+    <a href="mailto:hakobyanofelya988@gmail.com">
+      hakobyanofelya988@gmail.com
+    </a>
+
+    <a href="tel:+37498086989">
+      +374 98 086 989
+    </a>
+
+    <a
+      href="https://www.upwork.com/freelancers/~01b53803e51f4f0246"
+      target="_blank"
+    >
+      Upwork Profile ↗
+    </a>
+
+  </div>
+
+</footer>
+
+</div>
+
+</body>
+</html>
